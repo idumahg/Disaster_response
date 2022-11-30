@@ -26,6 +26,9 @@ def clean_data(df):
     
     # drop duplicate rows
     df = df.drop_duplicates()
+
+    # make "related" column to be binary
+    df.related.replace(2, 1, inplace=True)
     
     return df
 

@@ -57,9 +57,7 @@ def evaluate_model(model, X_test, Y_test, category_names):
     Y_pred = model.predict(X_test)
     Y_pred = pd.DataFrame(Y_pred, columns = category_names)
     
-    for column in category_names:
-        print(f'The test result for "{column}" column is:', '\n')
-        print(classification_report(Y_test[column], Y_pred[column]), '\n')
+    print(classification_report(y_test, y_pred, target_names=y_test.columns))
     
 
 def save_model(model, model_filepath):
