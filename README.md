@@ -2,18 +2,31 @@
 
 This project contains codes written to analyze disaster data from [Appen](https://appen.com) to build a model for an API that classifies disaster messages.
 
-The project also includes a web app where an emergency worker can input a new message and get classification results in several categories. The web app display
-visualizations of the data. This is a multi-output classification task.
+The project also includes a web app where an emergency worker can input a new message and get classification results in several categories. The web app display visualizations of the data. This is a multi-output classification task.
 
 
 ## Table of Contents
+* [Installation](#installation)
+* [Project Motivation](#project-motivation)
 * [Overview of project](#overview-of-project)
 * [Instruction for setting up](#instruction-for-setting-up)
 * [General info](#general-info)
 * [Acknowledgements](#acknowledgements)
 
 
-## Overview of project.
+## Installation
+
+There is no major libraries required to run the code beyond what is provided in the Anaconda python distribution. The code can be run with any version of Python 3.
+
+## Project Motivation
+
+Following a disaster, disaster response organizations get millions of communications either direct or via social media at the time when they have the least capacity to filter and pull out the messages which are most important. 
+
+The way disaster is responded to is that different organizations will take care of different part of the problems. One might be in charge of water, blocked roads, fire etc. However, it is usually the case that there is only one in a thousand messages that might be relevant to the disaster response professionals. 
+
+Therefore supervised machine learning based approaches are used and are more accurate than key word searches to analyze the data and know which of the organizations should respond to which need.
+
+## Overview of project
 
 There are three main components of this project:
 
