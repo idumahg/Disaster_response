@@ -17,7 +17,7 @@ visualizations of the data. This is a multi-output classification task.
 
 There are three main components of this project:
 
-#### 1. ETL Pipeline: 
+#### ETL Pipeline: 
 
   This first component is implemented in `process_data.py` and it:
   - Loads the `messages` and `categories` datasets.
@@ -25,7 +25,7 @@ There are three main components of this project:
   - Cleans the data.
   - Stores it in a SQLite database.
 
-#### 2. ML Pipeline:
+#### ML Pipeline:
 
 This component involves writing a machine learning pipeline that:
   - Loads data from the SQLite database.
@@ -37,30 +37,28 @@ This component involves writing a machine learning pipeline that:
   
 This is given in the `train_classifier.py`.
 
-#### 3. Flask Web App:
+#### Flask Web App:
 
-Here I use my knowledge of flask, html, css and javascript to build the web app. I also add to the web appdata visulaizations using Plotly.
-
-The goal of this project is to build a "meme generator" – a multimedia application to dynamically generate memes, including an image with an overlaid quote. 
-
-The quotes come from a variety of file types (PDF, TXT, DOCX and TXT). Hence we engineer a solution to extract each quote line-by-line from these files and save the images. 
-
-There are sample quotes and images of Xander the pup in the data folder. However, the app also accepts dynamic user input through a command-line tool and a web service. 
-
-With the flask web service, users can provide any image, together with a quote (with a body and author), and get an image with the quote inscribed onto the image.
+- Here I use my knowledge of flask, html, css and javascript to build the web app. 
+- I also add to the web appdata visulaizations using Plotly.
 
 ## Instruction for setting up
-* Install the dependencies by running 
-  ```
-  pip install -r requirements.txt
-  ```
-* To start the flask server run the following in terminal:
-  ```
-  python3 app.py
-  ```
-  This will provide a link where the server is located. The link will lead you to web service, where you caneither decide to generate a random image or create an image. To create an image, you will need to provide the image url, a quote and an author. 
-* The images will be saved in the static folder.
-* You can also get a random image by running the *meme.py* code in command line as described below.
+1. Run the following commands in the project's root directory to set up your database and model.
+
+    - To run ETL pipeline that cleans data and stores in database
+    
+        ```python data/process_data.py data/disaster_messages.csv data/disaster_categories.csv data/DisasterResponse.db```
+        
+    - To run ML pipeline that trains classifier and saves
+    
+        ```python models/train_classifier.py data/DisasterResponse.db models/classifier.pkl```
+
+2. Go to `app` directory: `cd app`
+
+3. Run your web app: `python run.py`
+
+4. Click on the web link to visualize the app.
+
 
 ## General info
 * Quote Engine: This module is composed of classes that ingest different file types that contain quotes. It contains:
