@@ -49,6 +49,7 @@ def tokenize(text):
         clean_tokens: the clean token
     """
     tokens = word_tokenize(text)
+    tokens = [tok for tok in tokens if tok not in stop_words]
     lemmatizer = WordNetLemmatizer()
 
     # iterate through each token
@@ -78,7 +79,7 @@ def build_model():
         'multi__estimator__min_samples_split': [2, 3, 5]}
 
     cv = GridSearchCV(pipeline, param_grid=parameters, n_jobs=5,
-                      verbose=2, cv=3)
+                      verbose=3, cv=3)
 
     return cv
 
