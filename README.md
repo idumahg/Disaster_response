@@ -2,7 +2,7 @@
 
 This project contains codes written to analyze disaster data from [Appen](https://appen.com) to build a model for an API that classifies disaster messages.
 
-The project also includes a web app where an emergency worker can input a new message and get classification results in several categories. The web app display visualizations of the data. This is a multi-output classification task.
+The project also includes a web app where an emergency worker can input a new message and get classification results in several categories. This is a multi-output classification task.
 
 
 ## Table of Contents
