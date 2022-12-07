@@ -50,13 +50,13 @@ def build_model():
                     ('tfidf', TfidfTransformer()),
                     ('multi', MultiOutputClassifier(clf))]) 
     
-#     parameters = {
-#         'multi__estimator__n_estimators': [100, 200, 300],
-#         'multi__estimator__min_samples_split': [2, 3, 5]}
+    parameters = {
+        'multi__estimator__n_estimators': [100, 200, 300],
+        'multi__estimator__min_samples_split': [2, 3, 5]}
     
-#     cv = GridSearchCV(pipeline, param_grid=parameters, n_jobs=5, verbose=2, cv=3)
+    cv = GridSearchCV(pipeline, param_grid=parameters, n_jobs=5, verbose=2, cv=3)
     
-    return pipeline
+    return cv
 
 
 def evaluate_model(model, X_test, Y_test, category_names):
