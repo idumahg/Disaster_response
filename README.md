@@ -78,7 +78,8 @@ This is given in the `train_classifier.py`.
 Here I provide a snapshot of the built web app.
 
 ![Screen Shot 2022-12-06 at 6 35 05 PM](https://user-images.githubusercontent.com/55643305/206059673-569892b5-e43a-4b09-9c11-e95c42b8806f.png)
-
+![Screen Shot 2022-12-06 at 7 58 12 PM](https://user-images.githubusercontent.com/55643305/206061741-25503eb8-11b1-4ebc-802d-e9300942978f.png)
+![Screen Shot 2022-12-06 at 7 58 36 PM](https://user-images.githubusercontent.com/55643305/206061756-bf15e17e-8cca-4cf3-8b34-1028a1bd2adf.png)
 
 
 ## Acknowledgements
