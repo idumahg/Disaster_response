@@ -5,6 +5,7 @@ import pandas as pd
 import pickle
 import nltk
 from nltk.tokenize import word_tokenize
+from nltk.corpus import stopwords
 from nltk.stem import WordNetLemmatizer
 from sklearn.metrics import confusion_matrix
 from sklearn.model_selection import train_test_split
@@ -14,7 +15,7 @@ from sklearn.pipeline import Pipeline
 from sklearn.multioutput import MultiOutputClassifier
 from sklearn.metrics import classification_report
 from sklearn.model_selection import GridSearchCV
-nltk.download(['punkt', 'wordnet'])
+nltk.download(['punkt', 'wordnet', 'stopwords'])
 
 
 def load_data(database_filepath):
@@ -49,7 +50,7 @@ def tokenize(text):
         clean_tokens: the clean token
     """
     tokens = word_tokenize(text)
-    tokens = [tok for tok in tokens if tok not in stop_words]
+    tokens = [tok for tok in tokens if tok not in stopwords.words("english")]
     lemmatizer = WordNetLemmatizer()
 
     # iterate through each token
