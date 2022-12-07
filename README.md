@@ -77,6 +77,9 @@ This is given in the `train_classifier.py`.
 
 Here I provide a snapshot of the built web app.
 
+![Screen Shot 2022-12-06 at 6 35 05 PM](https://user-images.githubusercontent.com/55643305/206059673-569892b5-e43a-4b09-9c11-e95c42b8806f.png)
+
+
 
 ## Acknowledgements
 - This project was inspired by the [Data Science nanodegree program at Udacity](https://www.udacity.com/course/data-scientist-nanodegree--nd025).
